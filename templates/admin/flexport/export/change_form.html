@@ -1,0 +1,125 @@
+{% extends "admin/change_form.html" %}
+
+{% block extrahead %}{{ block.super }}
+<style type="text/css">
+.grp-module.grp-table select, .grp-module.grp-table .grp-autocomplete-wrapper-m2m, .grp-module.grp-table .grp-autocomplete-wrapper-fk {
+  max-width: 378px;
+  }
+	.grp-table .grp-tbody .grp-td {margin:0px !important;padding: 0px !important;}
+	.grp-tools-container .grp-tools {right: 0px !important; }
+	</style>
+{% endblock %}
+{% block content %}{{ block.super }}
+
+<script type="text/javascript">
+
+function related_models(inp,defaultvalue,element){
+    $.ajax({
+      type: "GET",
+      url: "{% if object_id %}{% url 'flexport_js_related_models' id_extract=object_id %}{% endif %}",
+      global: false,
+      cache: false,
+      dataType: "json",
+      success: function(msg){
+        list_tipi = msg;
+        inp.empty();
+        inp.append(' <option value="">---------</option>');
+        if (list_tipi['models'].length > 0){
+          for (var j = 0 ; j < list_tipi['models'].length ; j++){
+            var item = list_tipi['models'][j];
+            selected = '';
+            if (item['value']==defaultvalue)
+              selected = ' selected="selected"';
+            inp.append(' <option value="' + item['value'] + '" '+selected+'>' + item['text'] + '</option>');
+            }
+          }
+        show_fields(inp,element);
+	}
+     });
+  }
+
+function show_fields(el,defaultval){
+  var fieldlist = el.parent().parent().find('.field select')
+  var model_follow = $("#"+el.attr('id')+" :selected").val();
+  if (model_follow!='' && model_follow!=undefined){ // questo controllo probabilmente non serve
+    $.ajax({
+      type: "GET",
+      url: {% if object_id %}"{{flexport_views_prefix}}/js/attributes/{{object_id}}/"+model_follow{% else %}""{% endif %},
+      global: false,
+      cache: false,
+      dataType: "json",
+      success: function(msg){
+        list_tipi = msg;
+        fieldlist.empty();
+        fieldlist.append(' <option value="">---------</option>');
+        if (list_tipi['fields'].length > 0){
+          for (var j = 0 ; j < list_tipi['fields'].length ; j++){
+            var item = list_tipi['fields'][j];
+            selected = '';
+            if (item['value']==defaultval)
+              selected = ' selected="selected"';
+            fieldlist.append(' <option value="' + item['value'] + '" '+selected+'>' + item['text'] + '</option>');
+            }
+          }
+        }
+      });
+    }
+  else
+    {
+    fieldlist.empty();
+    fieldlist.append(' <option value="">---------</option>');
+    }
+  }
+  
+function show_models(){
+  var app   = $("#id_app :selected").val();
+  var model = $("#id_model :selected").val();
+  if (app!=''){
+    $.ajax({
+      type: "GET",
+      url: "{% url 'flexport_js_models' %}",
+      global: false,
+      cache: false,
+      data: ({app:app}),
+      dataType: "json",
+      success: function(msg){
+        list_tipi = msg;
+        $("#id_model").empty();
+        $("#id_model").append(' <option value="">---------</option>');
+        if (list_tipi['models'].length > 0){
+          for (var j = 0 ; j < list_tipi['models'].length ; j++){
+            var item = list_tipi['models'][j];
+            if (item['id']!=model){
+              $("#id_model").append(' <option value="' + item['id'] + '">' + item['model_name'] + '</option>');
+              }
+            else{
+              $("#id_model").append(' <option value="' + item['id'] + '" selected="selected">' + item['model_name'] + '</option>');
+              }
+            }
+          }
+        }
+      });
+    }
+  }
+
+  $( document ).ready(function(){
+    show_models();
+    $("#id_app").change(function(){show_models();});
+    $("input[name^='fieldexport_set-'][name$='-model']").each(function() {
+      {% if object_id %}
+      // estraggo valore
+      defaultvalue_model = $(this).val();
+      // cambio il tipo
+      field = $(this).parent().parent().find('.field input')[0];
+      defaultvalue_field = $(field).val();
+      id_model = $(this).attr('id');
+      $(field).replaceWith('<select id="'+$(field).attr('id')+'" name="'+$(field).attr('name')+'"><option value="">---------</option></select>');
+      $(this).replaceWith('<select onchange="show_fields($(this));" id="'+id_model+'" name="'+$(this).attr('name')+'"><option value="">---------</option></select>');
+      // popolo il select
+      related_models($('#'+id_model),defaultvalue_model,defaultvalue_field);
+      {% endif %}
+      })
+  });
+
+</script>
+{% endblock %}

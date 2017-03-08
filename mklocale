@@ -1,0 +1,12 @@
+#!/bin/bash
+
+DJANGO_DIR=../../../include/django/
+export PYTHONPATH=$DJANGO_DIR:$PYTHONPATH
+
+for L in en it de fr
+do
+    $DJANGO_DIR/django/bin/django-admin.py makemessages -d djangojs -l $L
+    $DJANGO_DIR/django/bin/django-admin.py makemessages -l $L
+done
+
+$DJANGO_DIR/django/bin/django-admin.py compilemessages

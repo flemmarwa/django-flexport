@@ -1,0 +1,381 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-10-15 13:27+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: admin.py:53 admin.py:111
+msgid "Details"
+msgstr "Dettagli"
+
+#: admin.py:58
+msgid "Font"
+msgstr "Font"
+
+#: admin.py:72
+msgid "Align"
+msgstr "Allineamento"
+
+#: admin.py:83
+msgid "Borders"
+msgstr "Bordi"
+
+#: admin.py:93 models.py:282
+msgid "Pattern"
+msgstr "Pattern"
+
+#: admin.py:120
+msgid "Related tables"
+msgstr "Tabelle in relazione"
+
+#: admin.py:128
+msgid "Enabling"
+msgstr "Abilita"
+
+#: admin.py:134
+msgid "Default styles"
+msgstr "Stili di default"
+
+#: admin.py:144 admin.py:146 models.py:71 models.py:104 models.py:121
+msgid "Export"
+msgstr "Export"
+
+#: forms.py:19
+msgid ""
+"You must set the template when you choose one of HTML or PDF export types"
+msgstr ""
+"Devi impostare il template se scegli HTML o PDF come tipo di esportazione"
+
+#: forms.py:28
+msgid "Some characters are invalids. Ex.[]:\\?/* "
+msgstr "Alcuni caratteri non sono validi. Ex.[]:\\?/* "
+
+#: models.py:23
+msgid "PDF_TEMPLATES_PATH is not set in your settings.py"
+msgstr "PDF_TEMPLATES_PATH non è impostato nel tuo settings.py"
+
+#: models.py:25
+msgid " TEMP_PATH is not set in your settings.py"
+msgstr "TAMP_PATH non è impostato nel tuo settings.py"
+
+#: models.py:32
+msgid "Template description"
+msgstr "Descrizione template"
+
+#: models.py:33
+msgid "Name"
+msgstr "Nome"
+
+#: models.py:36
+msgid "Export template"
+msgstr "Template esportazione"
+
+#: models.py:37
+msgid "Esport templates"
+msgstr "Template esportazioni"
+
+#: models.py:53
+msgid "Export description"
+msgstr "Descrizione esportazione"
+
+#: models.py:54
+msgid "Action name"
+msgstr "Nome azione"
+
+#: models.py:55
+msgid "File name"
+msgstr "Nome file"
+
+#: models.py:55
+msgid "It's possibile set model info. Example:"
+msgstr "E' possibile usare informazioni sui dati. Esempio:"
+
+#: models.py:56
+msgid "File type"
+msgstr "Tipo di file"
+
+#: models.py:57
+msgid "Template"
+msgstr "Template"
+
+#: models.py:57
+msgid "To set only if you want to export in PDF or HTML"
+msgstr "Da impostare solo se vuoi esportare in PDF o HTML"
+
+#: models.py:58
+msgid "Reference application"
+msgstr "Aplicazione di riferimento"
+
+#: models.py:59
+msgid "Reference model"
+msgstr "Modello di riferimento"
+
+#: models.py:59
+msgid "Main model for data export"
+msgstr "Modello primario per l'esportazione dei dati"
+
+#: models.py:60
+msgid "Search depth between models"
+msgstr "Livello di profondità tra i modelli"
+
+#: models.py:62
+msgid "Enabled groups for this export"
+msgstr "Gruppi abilitati per questa esportazione"
+
+#: models.py:63
+msgid "Exclude models"
+msgstr "Modelli esclusi"
+
+#: models.py:65 models.py:126
+msgid "Model header style"
+msgstr "Stile intestazione modello"
+
+#: models.py:65 models.py:66 models.py:67
+msgid "Main style, you can overload it in each cell"
+msgstr "Stile principale, puoi comunque personalizzarlo in ogni cella"
+
+#: models.py:66 models.py:127
+msgid "Field header style"
+msgstr "Stile intestazione campo"
+
+#: models.py:67 models.py:128
+msgid "Column header style"
+msgstr "Stile intestazione colonna"
+
+#: models.py:72
+msgid "Exports"
+msgstr "Esportazioni"
+
+#: models.py:103
+msgid "Sheet order"
+msgstr "Ordine foglio"
+
+#: models.py:105
+msgid "Sheet name"
+msgstr "Nome foglio"
+
+#: models.py:109
+msgid "Export sheet"
+msgstr "Foglio della esportazione"
+
+#: models.py:110
+msgid "Export sheets"
+msgstr "Fogli della esportazione"
+
+#: models.py:120
+msgid "Column order"
+msgstr "Ordine colonna"
+
+#: models.py:120
+msgid ""
+"The number must be greater than 0 and there should be no jumps between a "
+"fields"
+msgstr ""
+"Il numero deve essere maggiore di 0 e non ci devono essere saltri "
+"nell'ordinamento"
+
+#: models.py:122
+msgid "Sheet"
+msgstr "Foglio"
+
+#: models.py:123
+msgid "Model"
+msgstr "Modello"
+
+#: models.py:124
+msgid "Field"
+msgstr "Campo"
+
+#: models.py:124
+msgid "Default is admin field name"
+msgstr "Default è il nome del campo"
+
+#: models.py:125
+msgid "Field header"
+msgstr "Intestazione campo"
+
+#: models.py:131
+msgid "Export field"
+msgstr "Campo della esportazione"
+
+#: models.py:132
+msgid "Export fields"
+msgstr "Campi delle esportazioni"
+
+#: models.py:241
+msgid "Style title"
+msgstr "Stile del titolo"
+
+#: models.py:245
+msgid "Font weight"
+msgstr "Peso del Font"
+
+#: models.py:246
+msgid "Chars group"
+msgstr "Gruppo di caratteri"
+
+#: models.py:247
+msgid "Colour"
+msgstr "Colore"
+
+#: models.py:248
+msgid "Font name"
+msgstr "Nome del Font"
+
+#: models.py:249
+msgid "Font height"
+msgstr "Altezza del font"
+
+#: models.py:249
+msgid "Expressed as multiples of 20 (200 = 10pt)"
+msgstr "Espresso come multipli di 20 (200 = 10pt)"
+
+#: models.py:250
+msgid "Italics"
+msgstr "Italico"
+
+#: models.py:251
+msgid "Profile"
+msgstr "Profilo"
+
+#: models.py:252
+msgid "Shadow"
+msgstr "Ombra"
+
+#: models.py:253
+msgid "Struck out"
+msgstr ""
+
+#: models.py:254
+msgid "Underline"
+msgstr "Sottolineato"
+
+#: models.py:257
+msgid "Direction"
+msgstr "Direzione"
+
+#: models.py:258
+msgid "Horizontal align"
+msgstr "Allineamento orizzontale"
+
+#: models.py:259
+msgid "Indent"
+msgstr "Indentazione"
+
+#: models.py:260
+msgid "Rotation"
+msgstr "Rotazione"
+
+#: models.py:261
+msgid "Shrink and fit"
+msgstr "Riduci e adatta"
+
+#: models.py:262
+msgid "Vertical align"
+msgstr "Allineamento verticale"
+
+#: models.py:263
+msgid "Wrap"
+msgstr "Circonda"
+
+#: models.py:266
+msgid "Left"
+msgstr "Sinistra"
+
+#: models.py:267
+msgid "Right"
+msgstr "Destra"
+
+#: models.py:268
+msgid "Top"
+msgstr "Sopra"
+
+#: models.py:269
+msgid "Bottom"
+msgstr "Sotto"
+
+#: models.py:270
+msgid "Diagonal"
+msgstr "Diagonale"
+
+#: models.py:271
+msgid "Left colour"
+msgstr "Colore sinistra"
+
+#: models.py:272
+msgid "Right colour"
+msgstr "Colore destra"
+
+#: models.py:273
+msgid "Top colour"
+msgstr "Colore superiore"
+
+#: models.py:274
+msgid "Bottom colour"
+msgstr "Colore inferiore"
+
+#: models.py:275
+msgid "Diagonal colour"
+msgstr "Colore diagonale"
+
+#: models.py:276
+msgid "Enable diagonal 1"
+msgstr "Abilita diagonale 1"
+
+#: models.py:277
+msgid "Enable diagonal 2"
+msgstr "Abilita diagonale 2"
+
+#: models.py:280
+msgid "Background colour"
+msgstr "Colore sfondo"
+
+#: models.py:281
+msgid "Foreground colour"
+msgstr "Colore primo piano"
+
+#: models.py:286
+msgid "Export cell style"
+msgstr "Stile cella da esportare"
+
+#: models.py:287
+msgid "Export cell styles"
+msgstr "Stili celle da esportare"
+
+#: utils_extractor.py:423
+msgid "Export type not found (available xls or pfd)"
+msgstr "Tipo di esportazione non trovato (disponibile XLS o PDF)"
+
+#: utils_extractor.py:430
+#, python-format
+msgid "Cannot delete old temporary file: %(filepath)s"
+msgstr "Impossibile cancellare il file temporaneo: %(filepath)s"
+
+#: utils_extractor.py:446
+msgid "No filetype found for saving"
+msgstr "Non è stato trovato il file da salvare"
+
+#: utils_extractor.py:448
+#, python-format
+msgid "Cannot save temporary file: %(filepath)s"
+msgstr "Impossibile salvare il file temporaneo: %(filepath)s"
+
+#: views.py:60 views.py:88
+msgid "Model not found"
+msgstr "Modello non trovato"
+
+#: views.py:82
+msgid "Attribute not found"
+msgstr "Attributo non trovato"

@@ -1,0 +1,378 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-10-15 13:27+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: admin.py:53 admin.py:111
+msgid "Details"
+msgstr ""
+
+#: admin.py:58
+msgid "Font"
+msgstr ""
+
+#: admin.py:72
+msgid "Align"
+msgstr ""
+
+#: admin.py:83
+msgid "Borders"
+msgstr ""
+
+#: admin.py:93 models.py:282
+msgid "Pattern"
+msgstr ""
+
+#: admin.py:120
+msgid "Related tables"
+msgstr ""
+
+#: admin.py:128
+msgid "Enabling"
+msgstr ""
+
+#: admin.py:134
+msgid "Default styles"
+msgstr ""
+
+#: admin.py:144 admin.py:146 models.py:71 models.py:104 models.py:121
+msgid "Export"
+msgstr ""
+
+#: forms.py:19
+msgid ""
+"You must set the template when you choose one of HTML or PDF export types"
+msgstr ""
+
+#: forms.py:28
+msgid "Some characters are invalids. Ex.[]:\\?/* "
+msgstr ""
+
+#: models.py:23
+msgid "PDF_TEMPLATES_PATH is not set in your settings.py"
+msgstr ""
+
+#: models.py:25
+msgid " TEMP_PATH is not set in your settings.py"
+msgstr ""
+
+#: models.py:32
+msgid "Template description"
+msgstr ""
+
+#: models.py:33
+msgid "Name"
+msgstr ""
+
+#: models.py:36
+msgid "Export template"
+msgstr ""
+
+#: models.py:37
+msgid "Esport templates"
+msgstr ""
+
+#: models.py:53
+msgid "Export description"
+msgstr ""
+
+#: models.py:54
+msgid "Action name"
+msgstr ""
+
+#: models.py:55
+msgid "File name"
+msgstr ""
+
+#: models.py:55
+msgid "It's possibile set model info. Example:"
+msgstr ""
+
+#: models.py:56
+msgid "File type"
+msgstr ""
+
+#: models.py:57
+msgid "Template"
+msgstr ""
+
+#: models.py:57
+msgid "To set only if you want to export in PDF or HTML"
+msgstr ""
+
+#: models.py:58
+msgid "Reference application"
+msgstr ""
+
+#: models.py:59
+msgid "Reference model"
+msgstr ""
+
+#: models.py:59
+msgid "Main model for data export"
+msgstr ""
+
+#: models.py:60
+msgid "Search depth between models"
+msgstr ""
+
+#: models.py:62
+msgid "Enabled groups for this export"
+msgstr ""
+
+#: models.py:63
+msgid "Exclude models"
+msgstr ""
+
+#: models.py:65 models.py:126
+msgid "Model header style"
+msgstr ""
+
+#: models.py:65 models.py:66 models.py:67
+msgid "Main style, you can overload it in each cell"
+msgstr ""
+
+#: models.py:66 models.py:127
+msgid "Field header style"
+msgstr ""
+
+#: models.py:67 models.py:128
+msgid "Column header style"
+msgstr ""
+
+#: models.py:72
+msgid "Exports"
+msgstr ""
+
+#: models.py:103
+msgid "Sheet order"
+msgstr ""
+
+#: models.py:105
+msgid "Sheet name"
+msgstr ""
+
+#: models.py:109
+msgid "Export sheet"
+msgstr ""
+
+#: models.py:110
+msgid "Export sheets"
+msgstr ""
+
+#: models.py:120
+msgid "Column order"
+msgstr ""
+
+#: models.py:120
+msgid ""
+"The number must be greater than 0 and there should be no jumps between a "
+"fields"
+msgstr ""
+
+#: models.py:122
+msgid "Sheet"
+msgstr ""
+
+#: models.py:123
+msgid "Model"
+msgstr ""
+
+#: models.py:124
+msgid "Field"
+msgstr ""
+
+#: models.py:124
+msgid "Default is admin field name"
+msgstr ""
+
+#: models.py:125
+msgid "Field header"
+msgstr ""
+
+#: models.py:131
+msgid "Export field"
+msgstr ""
+
+#: models.py:132
+msgid "Export fields"
+msgstr ""
+
+#: models.py:241
+msgid "Style title"
+msgstr ""
+
+#: models.py:245
+msgid "Font weight"
+msgstr ""
+
+#: models.py:246
+msgid "Chars group"
+msgstr ""
+
+#: models.py:247
+msgid "Colour"
+msgstr ""
+
+#: models.py:248
+msgid "Font name"
+msgstr ""
+
+#: models.py:249
+msgid "Font height"
+msgstr ""
+
+#: models.py:249
+msgid "Expressed as multiples of 20 (200 = 10pt)"
+msgstr ""
+
+#: models.py:250
+msgid "Italics"
+msgstr ""
+
+#: models.py:251
+msgid "Profile"
+msgstr ""
+
+#: models.py:252
+msgid "Shadow"
+msgstr ""
+
+#: models.py:253
+msgid "Struck out"
+msgstr ""
+
+#: models.py:254
+msgid "Underline"
+msgstr ""
+
+#: models.py:257
+msgid "Direction"
+msgstr ""
+
+#: models.py:258
+msgid "Horizontal align"
+msgstr ""
+
+#: models.py:259
+msgid "Indent"
+msgstr ""
+
+#: models.py:260
+msgid "Rotation"
+msgstr ""
+
+#: models.py:261
+msgid "Shrink and fit"
+msgstr ""
+
+#: models.py:262
+msgid "Vertical align"
+msgstr ""
+
+#: models.py:263
+msgid "Wrap"
+msgstr ""
+
+#: models.py:266
+msgid "Left"
+msgstr ""
+
+#: models.py:267
+msgid "Right"
+msgstr ""
+
+#: models.py:268
+msgid "Top"
+msgstr ""
+
+#: models.py:269
+msgid "Bottom"
+msgstr ""
+
+#: models.py:270
+msgid "Diagonal"
+msgstr ""
+
+#: models.py:271
+msgid "Left colour"
+msgstr ""
+
+#: models.py:272
+msgid "Right colour"
+msgstr ""
+
+#: models.py:273
+msgid "Top colour"
+msgstr ""
+
+#: models.py:274
+msgid "Bottom colour"
+msgstr ""
+
+#: models.py:275
+msgid "Diagonal colour"
+msgstr ""
+
+#: models.py:276
+msgid "Enable diagonal 1"
+msgstr ""
+
+#: models.py:277
+msgid "Enable diagonal 2"
+msgstr ""
+
+#: models.py:280
+msgid "Background colour"
+msgstr ""
+
+#: models.py:281
+msgid "Foreground colour"
+msgstr ""
+
+#: models.py:286
+msgid "Export cell style"
+msgstr ""
+
+#: models.py:287
+msgid "Export cell styles"
+msgstr ""
+
+#: utils_extractor.py:423
+msgid "Export type not found (available xls or pfd)"
+msgstr ""
+
+#: utils_extractor.py:430
+#, python-format
+msgid "Cannot delete old temporary file: %(filepath)s"
+msgstr ""
+
+#: utils_extractor.py:446
+msgid "No filetype found for saving"
+msgstr ""
+
+#: utils_extractor.py:448
+#, python-format
+msgid "Cannot save temporary file: %(filepath)s"
+msgstr ""
+
+#: views.py:60 views.py:88
+msgid "Model not found"
+msgstr ""
+
+#: views.py:82
+msgid "Attribute not found"
+msgstr ""

@@ -80,7 +80,7 @@ class StyleExportAdmin(admin.ModelAdmin):
         'fields': (
           ('font_family'),
           ('colour'),
-         # ('height'),
+        #  ('height'),
           ('italic'),
           ('bold'),
           ('shadow'),

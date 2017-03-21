@@ -44,7 +44,7 @@ def js_related_models(request,id_extract):
     in ricorrenza fino alla profondità impostata
     '''
     EXPORT = get_object_or_404(Export,id=id_extract)
-    MODEL  = apps.get_model(EXPORT.app, EXPORT.model.model)
+    MODEL  = get_model(EXPORT.app, EXPORT.model.model)
     if MODEL:
         JSON_DATA = []
         for models_array in get_related_models_recursive(MODEL,EXPORT.depth,EXPORT.exclude_models.all()):
@@ -61,8 +61,7 @@ def js_related_models(request,id_extract):
                   text+= '%s (%s)' % (model._meta.verbose_name.title(),field)
                 except:
                   text+= '%s (%s)' % (model._meta.verbose_name,field)
-            if {'value':value,'text':text} not in JSON_DATA:
-              JSON_DATA.append({'value':value,'text':text})
+            JSON_DATA.append({'value':value,'text':text})
         data = {'models' : JSON_DATA}
         return JsonResponse(data)
     else:
@@ -75,22 +74,20 @@ def js_attributes(request,id_extract,follow):
     raggiungere mediante la ricorrenza e profondità impostata
     '''
     EXPORT = get_object_or_404(Export,id=id_extract)
-    MODEL  = apps.get_model(EXPORT.app, EXPORT.model.model)
+    MODEL  = get_model(EXPORT.app, EXPORT.model.model)
     if MODEL:
         LAST_MODEL = MODEL
         for field in follow.split('.'):
             if field!='None':# None serve per restare sullo stesso modello di partenza
-              try:
-                _field = LAST_MODEL._meta.get_field(field)
-              except:
-                raise Exception(_('Attribute not found'))
-              else:
-                if hasattr(_field,'related_model'):
-                  # reverse link
-                  LAST_MODEL = getattr(_field,'related_model')
+                if hasattr(LAST_MODEL,field):
+                    try:
+                     # direct link
+                     LAST_MODEL = getattr(LAST_MODEL,field).field.rel.to
+                    except:
+                     # inverse link
+                     LAST_MODEL = getattr(LAST_MODEL,field).related.model
                 else:
-                  # direct link
-                  LAST_MODEL = _field.rel.to
+                    raise Exception(_('Attribute not found'))
         FIELDS = get_model_elements(LAST_MODEL)
         data = {'fields' : [{'value':field,'text':field} for field in FIELDS]}
         return JsonResponse(data)
@@ -120,7 +117,7 @@ def create_extraction(request,id_extract,qs = None):
 #    except:
 #      pass
     if FILTER != None:
-      BASE_MODEL = apps.get_model(EXPORT.app, EXPORT.model.model)
+      BASE_MODEL = get_model(EXPORT.app, EXPORT.model.model)
       qs = BASE_MODEL.objects.all()
       # listo i filtri
       filter = request.GET.get('filter',None)
